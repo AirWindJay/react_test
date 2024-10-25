@@ -3,7 +3,6 @@ const { getConnection } = require('../config/database');
 const getUserProfile = (req, res) => {
     const userId = req.params.id;
 
-    // Validate input
     if (!userId) {
         return res.status(400).json({ message: 'User ID is required.' });
     }
